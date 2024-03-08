@@ -2,8 +2,7 @@ import { RouterModule, PreloadAllModules } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -26,6 +25,7 @@ import { HelpPageComponent } from './pages/help-page/help-page.component';
 import { EbiHeaderComponent } from './components/ebi-header/ebi-header.component';
 import { EbiNavbarComponent } from './components/ebi-navbar/ebi-navbar.component';
 import { EbiFooterComponent } from './components/ebi-footer/ebi-footer.component';
+// Remove the duplicate import statement for 'HttpClientModule'
 
 
 @NgModule({
@@ -48,12 +48,14 @@ import { EbiFooterComponent } from './components/ebi-footer/ebi-footer.component
     LibraryPageComponent,
     HelpPageComponent
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    AppRoutingModule
-  ],
+  // ...
+
+    imports: [
+      BrowserModule,
+      FormsModule,
+      HttpClientModule,
+      AppRoutingModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
