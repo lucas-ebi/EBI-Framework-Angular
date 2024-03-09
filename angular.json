@@ -54,18 +54,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "data-submissions-interface:build"
+            "buildTarget": "data-submissions-interface:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "data-submissions-interface:build:production"
+              "buildTarget": "data-submissions-interface:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "data-submissions-interface:build"
+            "buildTarget": "data-submissions-interface:build"
           }
         },
         "test": {
@@ -103,6 +103,5 @@
         }
       }
     }
-  },
-  "defaultProject": "data-submissions-interface"
+  }
 }
